@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name | Portfolio</title>
+    <meta
+      name="description"
+      content="A modern, professional personal portfolio website featuring projects, experience, and resume details."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-gradient"></div>
+
+    <header class="site-header" id="top">
+      <nav class="nav container">
+        <a class="brand" href="#top">YourName<span>.</span></a>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+          ☰
+        </button>
+        <ul id="nav-links" class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <p class="eyebrow">Software Developer</p>
+        <h1>
+          Building clean, user-focused experiences with modern web technology.
+        </h1>
+        <p class="hero-text">
+          I design and ship practical software projects with attention to
+          performance, accessibility, and professional polish.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn btn-secondary" href="#contact">Get In Touch</a>
+        </div>
+        <ul class="social-links">
+          <li>
+            <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer"
+              >GitHub</a
+            >
+          </li>
+          <li><a href="#" aria-label="Add your LinkedIn URL here">LinkedIn</a></li>
+          <li><a href="#" aria-label="Add your other profile URL here">Other Site</a></li>
+        </ul>
+      </section>
+
+      <section id="about" class="section container">
+        <h2>About</h2>
+        <p>
+          I am a developer focused on building reliable, elegant products that
+          solve real problems. This portfolio highlights my selected projects,
+          professional experience, and resume.
+        </p>
+      </section>
+
+      <section id="projects" class="section container">
+        <div class="section-heading">
+          <h2>Projects</h2>
+          <p>Selected work demonstrating technical depth and product thinking.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Project One</h3>
+            <p>
+              Briefly describe your project, the technologies used, and the
+              impact it had.
+            </p>
+            <a href="#" class="inline-link">View details →</a>
+          </article>
+          <article class="card">
+            <h3>Project Two</h3>
+            <p>
+              Add another project with a concise summary and links to demo or
+              source code.
+            </p>
+            <a href="#" class="inline-link">View details →</a>
+          </article>
+          <article class="card">
+            <h3>Project Three</h3>
+            <p>
+              Share outcomes, key challenges solved, and any measurable
+              improvements.
+            </p>
+            <a href="#" class="inline-link">View details →</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section container">
+        <div class="section-heading">
+          <h2>Work Experience</h2>
+          <p>Your timeline of roles, responsibilities, and key achievements.</p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <h3>Job Title · Company Name</h3>
+            <p class="time">2024 — Present</p>
+            <p>
+              Describe your major contributions, technologies you worked with,
+              and business outcomes.
+            </p>
+          </article>
+          <article class="timeline-item">
+            <h3>Job Title · Company Name</h3>
+            <p class="time">2022 — 2024</p>
+            <p>
+              Add details that show growth, leadership, and measurable impact.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="resume" class="section container">
+        <div class="resume-card">
+          <h2>Resume</h2>
+          <p>
+            Keep an up-to-date resume available for recruiters and collaborators.
+          </p>
+          <a class="btn btn-primary" href="#" aria-label="Add resume file URL">
+            Download Resume
+          </a>
+        </div>
+      </section>
+
+      <section id="contact" class="section container">
+        <h2>Contact</h2>
+        <p>
+          Open to new opportunities, collaborations, and consulting work.
+        </p>
+        <a class="btn btn-secondary" href="mailto:you@example.com">you@example.com</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
