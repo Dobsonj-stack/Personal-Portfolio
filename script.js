@@ -7,11 +7,10 @@ const applyTheme = (theme) => {
     const isLight = theme === "light";
     const toggleLabel = themeToggle.querySelector(".toggle-label");
     if (toggleLabel) {
-      toggleLabel.textContent = isLight ? "Light mode" : "Dark mode";
+      toggleLabel.textContent = isLight ? "Mode: Light" : "Mode: Dark";
     }
     themeToggle.classList.toggle("is-light", isLight);
     themeToggle.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode");
-    themeToggle.setAttribute("aria-checked", String(isLight));
     themeToggle.setAttribute("aria-pressed", String(isLight));
   }
 };
