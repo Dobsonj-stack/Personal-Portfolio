@@ -276,11 +276,13 @@ h1 {
   margin-bottom: 0.45rem;
 }
 
+.social-links a,
 .inline-link {
   display: inline-block;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.social-links a:hover,
 .inline-link:hover {
   transform: translateY(-1px);
   box-shadow: var(--shadow);
