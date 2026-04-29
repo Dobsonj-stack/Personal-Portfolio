@@ -92,3 +92,28 @@ if (titleEl) {
       "The requested project could not be loaded. Please return to the projects list and try again.";
   }
 }
+
+const scrollTopBubble = document.querySelector('.scroll-top-bubble');
+const backToTopLinks = document.querySelectorAll('.back-to-top-link');
+
+const scrollToTop = (event) => {
+  if (event) {
+    event.preventDefault();
+  }
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+backToTopLinks.forEach((link) => {
+  link.addEventListener('click', scrollToTop);
+});
+
+if (scrollTopBubble) {
+  scrollTopBubble.addEventListener('click', scrollToTop);
+
+  const toggleScrollBubble = () => {
+    scrollTopBubble.classList.toggle('visible', window.scrollY > 0);
+  };
+
+  window.addEventListener('scroll', toggleScrollBubble, { passive: true });
+  toggleScrollBubble();
+}
