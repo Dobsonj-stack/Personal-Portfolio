@@ -255,3 +255,23 @@ h1 {
     flex-wrap: wrap;
   }
 }
+
+.project-detail-card {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+}
+
+.detail-block {
+  margin-top: 2rem;
+}
+
+.detail-list {
+  color: var(--muted);
+  padding-left: 1.2rem;
+}
+
+.detail-list li {
+  margin-bottom: 0.45rem;
+}
