@@ -7,6 +7,23 @@
   --accent-2: #15d0b4;
   --border: rgba(255, 255, 255, 0.08);
   --shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  --header-bg: rgba(9, 10, 19, 0.75);
+  --mobile-nav-bg: rgba(17, 19, 41, 0.98);
+  --card-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+}
+
+:root[data-theme="light"] {
+  --bg: #f5f7ff;
+  --panel: #ffffff;
+  --text: #1d2240;
+  --muted: #4f5a85;
+  --accent: #4f63ff;
+  --accent-2: #0ca188;
+  --border: rgba(29, 34, 64, 0.15);
+  --shadow: 0 12px 30px rgba(29, 34, 64, 0.15);
+  --header-bg: rgba(245, 247, 255, 0.85);
+  --mobile-nav-bg: rgba(255, 255, 255, 0.98);
+  --card-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(247, 249, 255, 0.9));
 }
 
 * {
@@ -43,7 +60,7 @@ body {
   position: sticky;
   top: 0;
   backdrop-filter: blur(12px);
-  background: rgba(9, 10, 19, 0.75);
+  background: var(--header-bg);
   border-bottom: 1px solid var(--border);
   z-index: 50;
 }
@@ -82,6 +99,23 @@ body {
 
 .nav-links a:hover {
   color: var(--text);
+}
+
+
+.theme-toggle {
+  margin-left: auto;
+  margin-right: 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--text);
+  padding: 0.45rem 0.8rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  box-shadow: var(--shadow);
 }
 
 .menu-toggle {
@@ -186,7 +220,7 @@ h1 {
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 1.15rem;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  background: var(--card-bg);
 }
 
 .timeline {
@@ -220,6 +254,12 @@ h1 {
 }
 
 @media (max-width: 720px) {
+  .theme-toggle {
+    margin-right: 0.6rem;
+    padding: 0.4rem 0.65rem;
+    font-size: 0.85rem;
+  }
+
   .menu-toggle {
     display: inline-flex;
   }
@@ -228,7 +268,7 @@ h1 {
     position: absolute;
     top: 72px;
     right: 4vw;
-    background: rgba(17, 19, 41, 0.98);
+    background: var(--mobile-nav-bg);
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 0.7rem;
@@ -260,7 +300,7 @@ h1 {
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 1.5rem;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  background: var(--card-bg);
 }
 
 .detail-block {
@@ -304,7 +344,7 @@ h1 {
   height: 44px;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: rgba(17, 19, 41, 0.92);
+  background: var(--panel);
   color: var(--text);
   font-size: 1.15rem;
   cursor: pointer;

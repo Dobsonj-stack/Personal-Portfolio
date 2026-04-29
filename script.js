@@ -1,3 +1,26 @@
+const themeToggle = document.getElementById("theme-toggle");
+const savedTheme = localStorage.getItem("theme");
+
+const applyTheme = (theme) => {
+  document.documentElement.setAttribute("data-theme", theme);
+  if (themeToggle) {
+    const isLight = theme === "light";
+    themeToggle.textContent = isLight ? "🌙 Dark" : "☀️ Light";
+    themeToggle.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode");
+    themeToggle.setAttribute("aria-pressed", String(isLight));
+  }
+};
+
+applyTheme(savedTheme === "light" ? "light" : "dark");
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const nextTheme = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+    applyTheme(nextTheme);
+    localStorage.setItem("theme", nextTheme);
+  });
+}
+
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 const year = document.getElementById("year");
