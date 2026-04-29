@@ -93,7 +93,7 @@ if (titleEl) {
   }
 }
 
-const scrollTopBubble = document.querySelector('.scroll-top-bubble');
+const scrollTopBubble = document.getElementById('scroll-top-bubble');
 const backToTopLinks = document.querySelectorAll('.back-to-top-link');
 
 const scrollToTop = (event) => {
@@ -111,7 +111,9 @@ if (scrollTopBubble) {
   scrollTopBubble.addEventListener('click', scrollToTop);
 
   const toggleScrollBubble = () => {
-    scrollTopBubble.classList.toggle('visible', window.scrollY > 0);
+    const shouldShow = window.scrollY > 180;
+    scrollTopBubble.classList.toggle('visible', shouldShow);
+    scrollTopBubble.setAttribute('aria-hidden', String(!shouldShow));
   };
 
   window.addEventListener('scroll', toggleScrollBubble, { passive: true });
