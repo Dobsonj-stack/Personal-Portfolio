@@ -313,6 +313,16 @@ h1 {
   z-index: 100;
 }
 
+.scroll-top-bubble:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.scroll-top-bubble:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 2px;
+}
+
 .scroll-top-bubble.visible {
   opacity: 1;
   pointer-events: auto;
