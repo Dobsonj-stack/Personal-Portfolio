@@ -5,8 +5,13 @@ const applyTheme = (theme) => {
   document.documentElement.setAttribute("data-theme", theme);
   if (themeToggle) {
     const isLight = theme === "light";
-    themeToggle.textContent = isLight ? "🌙 Dark" : "☀️ Light";
+    const toggleLabel = themeToggle.querySelector(".toggle-label");
+    if (toggleLabel) {
+      toggleLabel.textContent = isLight ? "Light mode" : "Dark mode";
+    }
+    themeToggle.classList.toggle("is-light", isLight);
     themeToggle.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode");
+    themeToggle.setAttribute("aria-checked", String(isLight));
     themeToggle.setAttribute("aria-pressed", String(isLight));
   }
 };
