@@ -93,7 +93,7 @@ if (titleEl) {
   }
 }
 
-const scrollTopBubble = document.getElementById('scroll-top-bubble');
+const scrollTopBubble = document.querySelector('.scroll-top-bubble');
 const backToTopLinks = document.querySelectorAll('.back-to-top-link');
 
 const scrollToTop = (event) => {
