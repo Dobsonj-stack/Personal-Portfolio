@@ -72,10 +72,11 @@ body {
 }
 
 .nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
   min-height: 72px;
+  gap: 1rem;
 }
 
 .brand {
@@ -95,6 +96,7 @@ body {
   gap: 1.25rem;
   margin: 0;
   padding: 0;
+  justify-self: center;
 }
 
 .nav-links a {
@@ -108,9 +110,14 @@ body {
 }
 
 
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
 .theme-toggle {
-  margin-left: auto;
-  margin-right: 0.8rem;
+  margin: 0;
   border: 1px solid var(--border);
   border-radius: 999px;
   background: color-mix(in oklab, var(--panel) 85%, var(--accent) 15%);
@@ -234,8 +241,7 @@ h1 {
 }
 
 .card,
-.timeline-item,
-.resume-card {
+.timeline-item {
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 1.15rem;
@@ -274,7 +280,6 @@ h1 {
 
 @media (max-width: 720px) {
   .theme-toggle {
-    margin-right: 0.6rem;
     padding: 0.4rem 0.65rem;
     font-size: 0.85rem;
   }
@@ -284,6 +289,7 @@ h1 {
   }
 
   .nav-links {
+    justify-self: auto;
     position: absolute;
     top: 72px;
     right: 4vw;
