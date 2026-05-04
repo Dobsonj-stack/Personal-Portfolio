@@ -242,10 +242,18 @@ h1 {
 
 .card,
 .timeline-item {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 1.15rem;
   background: var(--card-bg);
+}
+
+.card:hover,
+.timeline-item:hover,
+.project-detail-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
 }
 
 .timeline {
@@ -319,9 +327,21 @@ h1 {
   .social-links {
     flex-wrap: wrap;
   }
+
+  .subpage-nav {
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    padding: 0.6rem 0;
+  }
+
+  .subpage-nav .theme-toggle {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .project-detail-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 1.5rem;
@@ -358,7 +378,18 @@ h1 {
 }
 
 .back-to-top-link {
-  display: inline-block;
+  display: none;
+}
+
+.subpage-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 72px;
+}
+
+.subpage-nav .theme-toggle {
+  margin-left: auto;
 }
 
 .scroll-top-bubble {
